@@ -1,0 +1,8 @@
+# General Jekyll options https://jekyllrb.com/docs/configuration/
+exclude:
+  - README.md
+plugins:
+  - jekyll-remote-theme
+
+# Theme and theme options
+remote_theme: tomjoht/documentation-theme-jekyll@gh-pages
