@@ -5,4 +5,4 @@ plugins:
   - jekyll-remote-theme
 
 # Theme and theme options
-remote_theme: tomjoht/documentation-theme-jekyll@gh-pages
+remote_theme: sighingnow/jekyll-gitbook
