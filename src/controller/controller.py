@@ -26,8 +26,8 @@ def check_birds():
 
 
 bird_check = check_birds()
-#@run_every(s=30)
-@run_every(s=10)
+@run_every(s=30)
+#@run_every(s=5)
 def check_next_bird():
     # First say hello to the next bird in the list
     next(bird_check)
@@ -40,6 +40,7 @@ def check_next_bird():
             print("❗️ Haven't heard from bird {} in over {} min, ".format(
                 bird_id, deadline // 60000) + "must have flown away.")
             del active_birds[bird_id]
+            print("Birds left: {}".format(active_birds))
 
 
 def radio_send_group(msg, send_to="all"):
@@ -68,40 +69,50 @@ def radio_send_group(msg, send_to="all"):
 
 def reset_all():
     """Sends a reset message to all birds and clears the active list."""
+    print("📢 Send reset signal to all birds.")
     global active_birds
     active_birds.clear()
     radio_send_group("reset", send_to="all")
 
 
+def process_radio_msg(radio_msg):
+    """
+    Processes the radio message.
+    Right now only birds saying 'hello' to be registered.
+    """
+    if not radio_msg:
+        return
+    print("🐦 Bird heard: {}".format(radio_msg))
+    msg_split = radio_msg.split(MSG_DELIMITER)
+    if len(msg_split) != 2:
+        print("Could not separate msg into two.")
+        return
+    if msg_split[0] == "hello":
+        # Add new entry or update timestamp with last time we heard this bird
+        active_birds[msg_split[1]] = running_time()
+        # Send message back to let the bird know it's registered
+        radio.send(radio_received)
+    else:
+        print("Unexpected msg start: {}".format(msg_split[0]))
+
+
 # Turn on the radio and set group 1 to listen for new birds
 radio.on()
-radio.config(group=1, power=7)
+radio.config(group=1, power=7, queue=10)
 
 print("🚀 Programme starting...")
-#reset_all()
+reset_all()
 i = 0
 while True:
     # Listen for new birds
     radio_received = None
     try:
         radio_received = radio.receive()
+        while radio_received:
+            process_radio_msg(radio_received)
+            radio_received = radio.receive()
     except:
-        print("Error receiving msg: {}".format())
-    else:
-        if radio_received:
-            print("🐦 Bird heard: {}".format(radio_received))
-            msg_split = radio_received.split(MSG_DELIMITER)
-            if len(msg_split) != 2:
-                print("Could not separate msg into two.")
-            else:
-                if msg_split[0] == "hello":
-                    # Add new entry or update timestamp to indicate the last
-                    # time we heard from this bird
-                    active_birds[msg_split[1]] = running_time()
-                    # Send message back to let the bird know it's registered
-                    radio.send(radio_received)
-                else:
-                    print("Unexpected msg start: {}".format(msg_split[0]))
+        print("Error receiving msg: {}".format(radio_received))
 
     # Use buttons to select message to send out
     if button_a.is_pressed() and button_b.is_pressed():
@@ -130,4 +141,4 @@ while True:
         display.scroll(msg_options[i])
     # Update the selection on the display and wait before the next iteration
     display.show(i)
-    sleep(200)
+    sleep(100)
