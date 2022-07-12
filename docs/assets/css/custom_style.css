@@ -5,11 +5,13 @@ header {
 
 /* Box around exercise steps */
 .exercise {
-    border: 2px solid #7acdc2;
-    padding: 16px;
-    margin: 32px;
+    background-color: #7acdc21a;
+    border-left: 3px dashed #7acdc2;
+    padding: 8px 16px 16px 16px;
+    margin: 6px;
 }
 .exercise::first-line {
-    color: #6b4abf;
+    color: #174c45;
     font-weight: bold;
+    line-height: 2.5rem;
 }

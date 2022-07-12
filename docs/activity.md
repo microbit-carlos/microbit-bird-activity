@@ -73,21 +73,83 @@ Can you think of a way to alternate between showing `Image.HEART` and
 `Image.HEART_SMALL`? That way it'll look like a beating heart!
 </p>
 
+[Solution](https://github.com/microbit-carlos/microbit-bird-activity/tree/main/solutions/1-hello=beating-heart.md)
+
 ### What was that! A cat?
 
-There are multiple events to react to, seeing a cat 
+There are several events the bird can react to, and seeing a cat is quite important for bird survival.
+
+<p class="exercise">
+Exercise: <br>
+Let's copy and paste the "hello" example and replace the function name to
+`cat()` and change the decorator argument from "hello" to "cat".
+
+What do you think the bird should do in this case?
+Some examples of thing you can do can be found in the
+<a href="https://microbit-carlos.github.io/microbit-bird-activity/micropython/#quick-things-to-do-with-the-microbit">MicroPython page</a>.
+</p>
+
+And at the end of the function we want to warn other birds around us, let's do that adding this line at the end:
+
+```python
+bird.warn_about_cat()
+```
+
+[Solution](https://github.com/microbit-carlos/microbit-bird-activity/tree/main/solutions/2-cat.md)
+
+
+## Bird state
+
+```python
+while True:
+    # Look inside yourself and listen, how is your bird feeling?
+    bird_state = bird.current_state()
+    if bird_state == "chill":
+        display.show(Image.HAPPY)
+    sleep(100)
+```
+
+<p class="exercise">
+Exercise: <br>
+Birds don't like to be shaken, so "angry" can also be one of the bird states
+to programme.
+
+Let's expand that "if" statement with an "elif" and do something when the bird
+is "angry".
+</p>
+
+[Solution](https://github.com/microbit-carlos/microbit-bird-activity/tree/main/solutions/3-state-angry.md)
+
+
+## SoundEffects
+
+Need to explain this.
+
+```python
+audio.play(audio.SoundEffect(
+    freq_start=400,
+    freq_end=2000,
+    duration=500,
+    vol_start=100,
+    vol_end=255,
+    wave=audio.SoundEffect.WAVE_TRIANGLE,
+    fx=audio.SoundEffect.FX_VIBRATO,
+    interpolation=audio.SoundEffect.INTER_LOG
+))
+```
+
+<p class="exercise">
+Exercise: <br>
+Can you come up with an "angry" sound for the bird state?
+</p>
 
 
 ## TODO
 
 Things that will be included here:
 - Quick overview of the micro:bit
-- Explanation that the bird reacts to things in the environment (radio
-  messages) and physical state (shaken, loud)
-- Activity 1: Expand the events (decorator function) to react to something else
 - Activity 2: Expand the state (if-else inside `while True`)to react to something
 - Explain there are also a new Sound Effect system and provide example
 - Activity 3: Create a new sound for any of the reactions/states
-- Show that the Python project has a bird.py and main.py file 
 - Activity 4: Create a new event or state in bird.py, then react to it in main.py
 - What else?
