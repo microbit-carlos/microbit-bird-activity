@@ -1,4 +1,9 @@
-# Bird pipe cleaners
+---
+title: Bird Pipe Cleaners
+layout: post
+---
+
+# Bird Pipe Cleaners
 
 ## Bird 1
 
