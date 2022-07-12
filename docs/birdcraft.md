@@ -5,6 +5,11 @@ layout: default
 
 # Bird Pipe Cleaners
 
+TODO:
+- Indicate this is optional
+- But it should be fun!
+- Add a little bit of info/personality to each bird?
+
 ## Bird 1
 
 ### YouTube Instructions
@@ -14,7 +19,6 @@ layout: default
 [YouTube Link for Bird 1](https://www.youtube.com/watch?v=y6a4ZD9lkQc)
 
 
-
 ## Bird 2
 
 ### YouTube Instructions
@@ -22,7 +26,6 @@ layout: default
 [![Youtube Video 2 thumbnail](img/youtube2.jpg)](https://www.youtube.com/watch?v=Q7O9CJpYKZA)
 
 [YouTube Link for Bird 2](hhttps://www.youtube.com/watch?v=Q7O9CJpYKZA)
-
 
 
 ## Bird 3
@@ -39,5 +42,6 @@ layout: default
 ### YouTube Instructions
 
 [![Youtube Video 4 thumbnail](img/youtube4.jpg)](https://www.youtube.com/watch?v=-4h4fns9pOA)
+
 [YouTube Link for Eagle](https://www.youtube.com/watch?v=-4h4fns9pOA)
 
