@@ -9,7 +9,7 @@ kramdown:
 
 
 # Theme and theme options
-remote_theme: adamrehn/jekyll-theme-gitbook@v0.0.2
+remote_theme: adamrehn/jekyll-theme-gitbook@v0.0.1
 sass:
   style: compressed
 
