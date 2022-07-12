@@ -5,13 +5,14 @@ plugins:
   - jekyll-remote-theme
 
 # Theme and theme options
-remote_theme: marella/jekyll-theme-documentation
+remote_theme: carlosperate/jekyll-theme-documentation
 
 # Site settings
 title: "micro:bit Bird Activity" 
 description: "Play with micro:bit and join the flock!"
 owner_name: "Micro:bit Educational Foundation"
 owner_url: "https://microbit-carlos.github.io/microbit-bird-activity/"
+custom_css: "assets/css/custom_style.css"
 permalink: pretty
 nav:
   - Getting Started:
