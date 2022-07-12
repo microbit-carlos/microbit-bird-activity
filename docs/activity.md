@@ -2,6 +2,7 @@
 
 Let's bring our bird alive with code!
 
+
 ## What is all this about?
 
 Your task is to think like a bird and programme the micro:bit to react to the world like a bird.
@@ -14,7 +15,8 @@ around".
 Apart from that the micro:bit contains other sensors that your bird will react
 to, for example, birds don't like to be shaken!
 
-## First steps - load the starter project into the editor
+
+## First steps - Load the starter project into the editor
 
 Okay, so the first step is to open this link to the Python Editor.
 This link contains a flag to enable additional beta features:
@@ -30,9 +32,9 @@ And then drag and drop the hex file to the Python Editor. The editor might
 warn you that this action will replace the project, you can click "Replace" to
 accept it.
 
-### So... What is all this?
+### So... What am I looking at?
 
-Okay, so this hex file contains two files, to see them let's go to "Project"
+The loaded hex file contains two files, to see them let's go to "Project"
 section on the left sidebar:
 
 ![Python Editor Projects](img/editor-project.png)
@@ -46,6 +48,34 @@ react to the world.
 There are some comments in both files that should help clarify what things
 are doing, but you can continue with the activity as we look at different
 parts in steps.
+
+
+## Reacting to events
+
+You'll see at the top of `main.py` a function called `hello()` with a decorator
+`@bird.react("hello")` on top:
+
+```python
+@bird.react("hello")
+def hello():
+    """Somebody is saying hi, how lovely!"""
+    display.show(Image.HEART)
+    sleep(400)
+```
+
+When the bird detects a hello message from the airwaves, it will run this
+function and show a heart image in the micro:bit display for 400 milliseconds.
+
+<p class="exercise">
+Exercise: <br>
+Birds can be very chatty, so your neighbours might be saying hello quite often.
+Can you think of a way to alternate between showing `Image.HEART` and
+`Image.HEART_SMALL`? That way it'll look like a beating heart!
+</p>
+
+### What was that! A cat?
+
+There are multiple events to react to, seeing a cat 
 
 
 ## TODO

@@ -2,3 +2,14 @@
 header {
     background: transparent linear-gradient(to right, #6c4bc1 0%, #7bcdc2 100%) 0% 0% no-repeat padding-box;
 }
+
+/* Box around exercise steps */
+.exercise {
+    border: 2px solid #7acdc2;
+    padding: 16px;
+    margin: 32px;
+}
+.exercise::first-line {
+    color: #6b4abf;
+    font-weight: bold;
+}
