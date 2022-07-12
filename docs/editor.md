@@ -11,7 +11,7 @@ activity!
 
 The new editor has been built from the ground-up with classroom use in mind, and it aims to make text-based coding more accessible to students who may find it hard to engage with the subject by removing known barriers to learning.
 
-![Python Editor](img/editor.png)
+![Python Editor](img/editor-overview.png)
 
 For a walk through of all the features of the new editor see this
 [Python Editor Guide](https://support.microbit.org/support/solutions/articles/19000135210-python-editor-guide).

@@ -8,7 +8,7 @@ plugins:
 remote_theme: carlosperate/jekyll-theme-documentation
 
 # Site settings
-title: "micro:bit Bird Activity" 
+title: "BBC micro:bit Bird Activity" 
 description: "Play with micro:bit and join the flock!"
 owner_name: "Micro:bit Educational Foundation"
 owner_url: "https://microbit-carlos.github.io/microbit-bird-activity/"
@@ -18,10 +18,10 @@ nav:
   - Getting Started:
     - Introduction: ''
   - Bird Making:
-    - Bird with pipe cleaners: birdcraft
+    - Bird Pipe Cleaners: birdcraft
   - It's alive:
     - Coding Activity: activity
   - More info:
-    - Submit your SoundEffects: submitse
-    - Python Editor (TBD): ''
-    - MicroPython (TBD): ''
+    - Submit Your SoundEffects: submitse
+    - Python Editor: 'editor'
+    - MicroPython: 'micropython'
