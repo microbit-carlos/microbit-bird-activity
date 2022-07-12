@@ -1,5 +1,5 @@
 ---
-title: Bird Pipe Cleaners
+permalink: /
 ---
 
 # micro:bit Bird Activity

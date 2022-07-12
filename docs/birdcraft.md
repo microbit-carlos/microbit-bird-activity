@@ -1,6 +1,6 @@
 ---
 title: Bird Pipe Cleaners
-layout: post
+layout: default
 ---
 
 # Bird Pipe Cleaners

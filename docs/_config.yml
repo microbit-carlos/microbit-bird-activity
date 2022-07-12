@@ -3,66 +3,21 @@ exclude:
   - README.md
 plugins:
   - jekyll-remote-theme
-markdown: kramdown
-kramdown:
-  input: GFM
-
 
 # Theme and theme options
-remote_theme: adamrehn/jekyll-theme-gitbook@v0.0.1
-sass:
-  style: compressed
+remote_theme: marella/jekyll-theme-documentation
 
 # Site settings
 title: "micro:bit Bird Activity" 
 description: "Play with micro:bit and join the flock!"
-url: "https://microbit-carlos.github.io/"
-baseurl: "/microbit-bird-activity"
-
-# More Theme settings
-theme-settings:
-  # Copyright settings
-  copyright:
-    author: "Micro:bit Educational Foundation"
-    license: "Licensed under the MIT License, see the file [LICENSE](https://github.com/microbit-carlos/microbit-bird-activity/blob/main/LICENSE) for details."
-    year: 2022
-  
-  # The collection that contains our chapters
-  collection: "categories"
-  
-  # Enable generation of links for chapter index pages
-  indices: true
-
-# Configure the permalinks for each chapter
-#collections_dir: _collections
-#collections:
-#  chapters:
-#    output: true
-#    permalink: /:path
-
-# Use front matter defaults to supply the metadata for each chapter
-#defaults:
-#  -
-#    scope:
-#      path: ""
-#      type: "chapters"
-#    values:
-#      layout: "default"
-#  -
-#    scope:
-#      path: "_collections/_chapters/first-chapter"
-#    values:
-#      chapter: "First Chapter"
-#      chapnum: 1
-#  -
-#    scope:
-#      path: "_collections/_chapters/second-chapter"
-#    values:
-#      chapter: "Second Chapter"
-#      chapnum: 2
-#  -
-#    scope:
-#      path: "_collections/_chapters/third-chapter"
-#    values:
-#      chapter: "Third Chapter"
-#      chapnum: 3
+owner_name: "Micro:bit Educational Foundation"
+owner_url: "https://microbit-carlos.github.io/microbit-bird-activity/"
+nav:
+  - Getting Started:
+    - Introduction: ''
+  - Bird Making:
+    - Markdown: birdcraft
+  - Coding Activity:
+    - TBD: ''
+  - More info:
+    - TBD: ''
