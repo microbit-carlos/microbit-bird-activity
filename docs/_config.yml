@@ -12,11 +12,12 @@ title: "micro:bit Bird Activity"
 description: "Play with micro:bit and join the flock!"
 owner_name: "Micro:bit Educational Foundation"
 owner_url: "https://microbit-carlos.github.io/microbit-bird-activity/"
+permalink: pretty
 nav:
   - Getting Started:
     - Introduction: ''
   - Bird Making:
-    - Bird with pipe cleaners: birdcraft.html
+    - Bird with pipe cleaners: birdcraft
   - It's alive:
     - Coding Activity (TBD): ''
   - More info:
