@@ -2,8 +2,14 @@
 
 Let's bring our bird alive with code!
 
+<p align="center">
+<img src="/microbit-bird-activity/img/its-alive.gif" alt="It's alive gif">
+</p>
+
 
 ## What is all this about?
+
+<img width="30%" alt="microbit-universal-hex logo" src="/microbit-bird-activity/img/bird-with-microbit.jpg" align="right">
 
 Your task is to think like a bird and programme the micro:bit to react to the world like a bird.
 
@@ -12,8 +18,13 @@ There will be a secret micro:bit in the room broadcasting radio messages to
 all the birds indicating different events like "saying hello" o "there is a cat
 around".
 
-Apart from that the micro:bit contains other sensors that your bird will react
+Apart from that, the micro:bit contains other sensors that your bird will react
 to, for example, birds don't like to be shaken!
+
+To programme the micro:bit with Python we use 
+[MicroPython (click here for more info)](https://microbit-carlos.github.io/microbit-bird-activity/micropython/)
+and brand new
+[Python Editor (click here for more info)](https://microbit-carlos.github.io/microbit-bird-activity/editor/).
 
 
 ## First steps - Load the starter project into the editor
@@ -48,6 +59,13 @@ react to the world.
 There are some comments in both files that should help clarify what things
 are doing, but you can continue with the activity as we look at different
 parts in steps.
+
+The sidebar also have other useful sections:
+- Reference: A place to explore the features of your micro:bit with Python
+- API: The micro:bit MicroPython API developer documentation
+
+<img width="45%" alt="microbit-universal-hex logo" src="/microbit-bird-activity/img/editor-references.png">
+<img width="45%" alt="microbit-universal-hex logo" src="/microbit-bird-activity/img/editor-api.png">
 
 
 ## Reacting to events
