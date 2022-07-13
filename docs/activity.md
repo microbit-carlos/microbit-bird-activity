@@ -159,8 +159,9 @@ the bird is "angry".
 
 ## SoundEffects
 
-TODO: Need to explain this, and make it appealing for users to spend most of
-the time here.
+But hold on. What's with all these images on screens? Aside from their uncanny ability to fly (sorry Kiwi, Ostrich, Kakapo, Penguin, etc :( ) birds are probably most famous for the sounds they make
+
+The micro:bit V2 has a built-in speaker, and a lot of the fun of building birds is giving them a unique voice.
 
 ```python
 audio.play(audio.SoundEffect(
