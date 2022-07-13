@@ -1,4 +1,4 @@
-# microbit-module: bird@0.0.1
+# microbit-module: bird@0.1.0
 # Welcome to the bird brain, processing the world around it!
 # The bird notices several 'events' that can happen in their environment
 # and can react to them.
@@ -30,9 +30,6 @@ __RADIO_GROUP_BIRDS = 17
 
 # Defined radio messages to react to
 _events = ["hello", "cat", "hawk", "food", "dawn", "dusk"]
-_states = ["chill", "hungry", "angry"]
-
-# Callbacks for the react decorator
 
 
 class react():
@@ -68,13 +65,17 @@ def __hi_everyone_i_am_here():
             __radio.send(msg_out)
             __mb.sleep(__rand.randint(100,300))
             radio_received = __radio.receive()
-        except:
-            pass
-        else:
-            if radio_received == msg_out:
+            while radio_received:
+                if radio_received == msg_out:
+                    break
+                else:
+                    radio_received = __radio.receive()
+            if radio_received != msg_out:
                 # So glad somebody said hello back, I can go on with my business now
                 print("🎉 Somebody said hello back, this is such a friendly neighbourhood!")
                 break
+        except:
+            pass
     else:
         # I've been waiting too long to be acknowledged
         print("Warning! Bird could not hear any hello back.")
@@ -83,7 +84,7 @@ def __hi_everyone_i_am_here():
 
 
 def __friendly_name():
-    """Returns a string with a friendly name based on MCU Unique ID."""
+    """Returns a string with a friendly name based on the MCU Unique ID."""
     length, letters = 5, 5
     codebook = [
         ['z', 'v', 'g', 'p', 't'],
@@ -141,30 +142,6 @@ def __process_world(message):
     if msg_split[0] in react.callbacks:
         react.callbacks[msg_split[0]]()
     return
-    # Check for radio signals:
-    # for us/under the hood: 
-        # stop
-        # start
-    # for the user:
-        # hello: new bird
-        # cat : predator below
-        # hawk: predator above
-        # food: time for dinner
-        # dawn: time to wake up
-        # dusk: time to go to sleep
-    if message:
-        if message == "stop":
-            #sleep!
-            #while we don't have sleep, just loop waiting for the start command
-            #__wait_for_start()
-            pass
-        elif (message == "hawk"  or message == "cat"):
-            #impose a small delay before warning others
-            __mb.sleep(200)
-            return message
-        else:
-            if message in _events:
-                return message
 
 
 def current_state():
@@ -174,15 +151,19 @@ def current_state():
     # Check for motion
     if __mb.accelerometer.was_gesture('shake'):
         return 'motion'
-    __mb.sleep(10)   # Ensure run_every has a chance to run
+    __mb.sleep(10)   # Ensure run_every/gestures have a chance to run
     return "chill"
 
 
 def warn_about_hawk():
+    # Impose a delay before warning others
+    __mb.sleep(__rand.randint(500,1500))
     __radio.send("hawk->all")
 
 
 def warn_about_cat():
+    # Impose a delay before warning others
+    __mb.sleep(__rand.randint(500,1500))
     __radio.send("cat->all")
 
 
