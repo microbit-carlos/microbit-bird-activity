@@ -145,12 +145,13 @@ def __process_world(message):
 
 
 def current_state():
-    # Check for a loud noise
-    if __mb.microphone.current_event() == __mb.SoundEvent.LOUD:
-        return 'squawk'
-    # Check for motion
-    if __mb.accelerometer.was_gesture('shake'):
-        return 'motion'
+    # Check the motion sensor to see if we are angering the bird
+    if __mb.accelerometer.was_gesture("shake"):
+        return "angry"
+    # How would you create a new "I fell down" event?
+    # A list of gestures can be found in the docs:
+    # https://microbit-micropython.readthedocs.io/en/v2-docs/accelerometer.html
+
     __mb.sleep(10)   # Ensure run_every/gestures have a chance to run
     return "chill"
 

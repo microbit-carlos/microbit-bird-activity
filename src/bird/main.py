@@ -3,22 +3,16 @@
 # bird.py file, feel free to have a peek if you like, but there is no need yet.
 from microbit import *
 import bird
-import audio_soundeffect as audio
 
 # Your bird will react to events in their environment via decorators like the
 # one below this comment. You can modify this example and create new ones for
-# all the other events:
-# TODO: copy the final list here
-
-BIG_HEART = True
+# all the other events: "hello", "cat", "hawk", "food", "dawn", "dusk"
 
 @bird.react("hello")
 def hello():
     """Somebody is saying hi, how lovely!"""
-    # Toggle the display between small and large heart
-    global BIG_HEART
-    display.show(Image.HEART if BIG_HEART else Image.HEART_SMALL)
-    BIG_HEART = not BIG_HEART
+    display.show(Image.HEART)
+    sleep(400)
 
 @bird.react("cat")
 def cat():
@@ -27,12 +21,11 @@ def cat():
     pass
 
 
-# But first, let's start reacting to 
+# Other things can also happen to our birds, check its state and act accordingly 
 while True:
     # Look inside yourself and listen, how is your bird feeling?
     bird_state = bird.current_state()
     if bird_state == "chill":
         display.show(Image.HAPPY)
-    elif bird_state == "angry":
-        display.show(Image.ANGRY)
+    # What other states we can react to in here? Let's try "angry"
     sleep(100)
