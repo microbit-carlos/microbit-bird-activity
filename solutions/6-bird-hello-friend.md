@@ -4,8 +4,6 @@ bird.py:
 
 ```python
 def say_hello_to(friendly_name):
-    # Impose a delay before warning others
-    __mb.sleep(__rand.randint(500,1500))
     __radio.send("hello->{}".format(friendly_name))
 ```
 
@@ -16,6 +14,7 @@ while True:
     if button_a.is_pressed():
         # Find out somebody else friendly name
         bird.say_hello_to("friendly name goes here")
+        # Wait a bit to ensure a single press doesn't trigger multiple hellos
         sleep(500)
     elif button_b.is_pressed():
         my_name = bird.friendly_name()

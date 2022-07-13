@@ -1,8 +1,10 @@
 # MicroPython on the BBC micro:bit
 
 Need to add some content here.
+- Thank all the MicroPython contributors
 
 Links:
+- https://microbit.org/get-started/user-guide/python/
 - https://github.com/microbit-foundation/micropython-microbit-v2
 - https://microbit-micropython.readthedocs.io/en/v2-docs/
 

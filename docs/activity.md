@@ -55,9 +55,9 @@ In this view you can switch between the `main.py` file and the `bird.py`.
 react to the world.
 - The `main.py` file is the main code we will be working on.
 
-There are some comments in both files that should help clarify what things
-are doing, but you can continue with the activity as we look at different
-parts in steps.
+Both files have some comments that should help clarify what some of the
+code is doing, but there is no need to familiarise yourself with these yet,
+as we'll work through the files as part of this activity.
 
 The sidebar also have other useful sections:
 - Reference: A place to explore the features of your micro:bit with Python
@@ -86,11 +86,16 @@ function and show a heart image in the micro:bit display for 400 milliseconds.
 <p class="exercise">
 Exercise: <br>
 Birds can be very chatty, so your neighbours might be saying hello quite often.
+<br>
 Can you think of a way to alternate between showing `Image.HEART` and
 `Image.HEART_SMALL`? That way it'll look like a beating heart!
 </p>
 
-[Solution](https://github.com/microbit-carlos/microbit-bird-activity/tree/main/solutions/1-hello=beating-heart.md)
+[Solution](https://github.com/microbit-carlos/microbit-bird-activity/tree/main/solutions/1-hello-beating.md)
+
+When you code is ready, click the purple "Send to micro:bit" button.
+If WebUSB is not available in your browser, you can click the "Save" button
+to download a hex file, and then copy that file into the `MICROBIT` USB drive.
 
 ### What was that! A cat?
 
@@ -98,8 +103,10 @@ There are several events the bird can react to, and seeing a cat is quite import
 
 <p class="exercise">
 Exercise: <br>
-Let's copy and paste the "hello" example, replace the function name to
-`cat()`, and change the decorator argument from "hello" to "cat".
+Let's do the following:<br>
+- Copy and paste the "hello" example <br>
+- Replace the function name to `cat()` <br>a
+- Change the decorator argument from "hello" to "cat".<br>
 <br>
 What do you think the bird should do in this case?
 <br>
@@ -107,8 +114,8 @@ Some examples of thing you can do can be found in the
 <a href="https://microbit-carlos.github.io/microbit-bird-activity/micropython/#quick-things-to-do-with-the-microbit" target="_blank">MicroPython page</a>.
 </p>
 
-We also want to warn other birds around us, let's do that adding by this line
-at the end of the function :
+We also want to warn other birds around us,
+let's do that by adding by this line at the end of the function :
 
 ```python
 bird.warn_about_cat()
@@ -139,7 +146,7 @@ figure how your bird is doing.
 <p class="exercise">
 Exercise: <br>
 Birds don't like to be shaken, so "angry" can also be one of the bird states
-to react.
+to code.
 <br>
 Let's expand that "if" statement with an "elif" and do something else when
 the bird is "angry".
@@ -150,21 +157,37 @@ the bird is "angry".
 
 ## SoundEffects
 
-TODO: Need to explain this, and make it appeling for users to spend most of
+TODO: Need to explain this, and make it appealing for users to spend most of
 the time here.
 
 ```python
 audio.play(audio.SoundEffect(
     freq_start=400,
-    freq_end=2000,
-    duration=500,
-    vol_start=100,
-    vol_end=255,
-    wave=audio.SoundEffect.WAVE_TRIANGLE,
-    fx=audio.SoundEffect.FX_VIBRATO,
-    interpolation=audio.SoundEffect.INTER_LOG
+    freq_end=900,
+    duration=1000,
+    vol_start=255,
+    vol_end=0,
+    wave=audio.SoundEffect.WAVE_NOISE,
+    fx=audio.SoundEffect.FX_TREMOLO,
+    interpolation=audio.SoundEffect.INTER_LINEAR
 ))
 ```
+
+The Python REPL is a great place to quickly try some Python code.
+
+To use the REPL, first connect to the micro:bit with the "Send to micro:bit"
+button. And then press the "Show serial" on the right of the dark box:
+
+![Hidden REPL screenshot](img/repl-hidden.png)
+
+Then the three dots menu on the right, and select the "Send Ctrl+C" option:
+
+<img src="/microbit-bird-activity/img/repl-menu.png" alt="REPL menu" width="200px">
+
+And there we go, the MicroPython REPL, where you can type or paste any Python
+code you like, and it will execute it inmediately:
+
+![Hidden REPL screenshot](img/repl-expanded.png)
 
 <p class="exercise">
 Exercise: <br>
@@ -173,55 +196,46 @@ What kind of sound would a bird make if they spot a cat?
 </p>
 
 There is no "solution" for this exercise, be as creative as you'd like!
+
 Have you tried playing multiple sounds one after another?
 You can make an ever longer cooler sound 📢. 
 
-TODO: Update this example to recreate a `micro.Sound.xxx` built in.
-
 ```python
 effect_one = audio.SoundEffect(
-    freq_start=400,
-    freq_end=2000,
-    duration=500,
-    vol_start=100,
+    freq_start=988,
+    freq_end=440,
+    duration=190,
+    vol_start=255,
     vol_end=255,
-    wave=audio.SoundEffect.WAVE_TRIANGLE,
-    fx=audio.SoundEffect.FX_VIBRATO,
-    interpolation=audio.SoundEffect.INTER_LOG
-))
-
+    wave=audio.SoundEffect.WAVE_SINE,
+    fx=audio.SoundEffect.FX_VIBRATO
+)
 effect_two = audio.SoundEffect(
-    freq_start=400,
-    freq_end=2000,
-    duration=500,
-    vol_start=100,
-    vol_end=255,
-    wave=audio.SoundEffect.WAVE_TRIANGLE,
-    fx=audio.SoundEffect.FX_VIBRATO,
-    interpolation=audio.SoundEffect.INTER_LOG
-))
+    freq_start=2570,
+    freq_end=440,
+    duration=874,
+    vol_start=255,
+    vol_end=87,
+    wave=audio.SoundEffect.WAVE_SAWTOOTH,
+    fx=audio.SoundEffect.FX_VIBRATO
+)
 
-effect_three = audio.SoundEffect(
-    freq_start=400,
-    freq_end=2000,
-    duration=500,
-    vol_start=100,
-    vol_end=255,
-    wave=audio.SoundEffect.WAVE_TRIANGLE,
-    fx=audio.SoundEffect.FX_VIBRATO,
-    interpolation=audio.SoundEffect.INTER_LOG
-))
-
-audio.play(effect_one, wait=False)
-audio.play(effect_two, wait=False)
-audio.play(effect_three, wait=False)
+audio.play(effect_one)
+audio.play(effect_two)
 ```
 
-## TODO
 
-Things that will be included here:
-- [ ] Quick overview of the micro:bit
-- [ ] Explain there are also a new Sound Effect system and provide example
-- [ ] Make it more playful
-- [ ] Proofread it
-- [ ] What else?
+## More events, more sounds
+
+There are other events that can be programmed, the full list is:
+
+- `hello`: Say hi to the flock
+- `cat` : There is a predator below
+- `hawk`: There is a predator above
+- `dawn`: It's time to wake up
+- `dusk`: It's time to go to sleep
+
+What kind of sounds would you create for each one of these?
+
+You can add more functions with the `@bird.react("event")` decorator to play
+a different Sound Effect on each of these events.

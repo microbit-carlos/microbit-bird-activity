@@ -14,7 +14,7 @@ With this micro:bit activity we will:
 
 1. Build a bird, with pipe cleaners (optional but really fun!)
 2. Program the bird with the help of a `bird.py` module
-    - And we are going to use the new micro:bit Python Editor!
+    - We are going to use the new micro:bit Python Editor!
 3. Think like a bird and decide how a  bird reacts to events in the world and
   as part of the flock
 
@@ -24,8 +24,8 @@ With this micro:bit activity we will:
 But first, let's make sure we can find where things are.
 
 We tried to make the contents of this website easy to find, but if something is
-missing or hard to find look around for one of the micro:bit helpers and
-we'll be happy to help with anything :)
+missing, hard to find, or broken, please look around for one of the micro:bit
+helpers and we'll be happy to help with anything and update the website.
 
 In short:
 
@@ -37,9 +37,12 @@ In short:
 
 To go through this activity you'll need:
 
-- 1 laptop
+- 1 laptop with a web browser and a USB port
+    - A Chrome based browser works best for direct connection to the micro:bit
+      but it is not necessary.
 - 1 micro:bit
 - 1 USB cable
+    - If you only have USB C ports let us know as we have a few adaptors
 - 1 battery holder (optional)
 - 1 bird of your making (optional, but really fun!)
 
@@ -80,9 +83,10 @@ Check out the [Coding Activity page](activity).
 One of the other brand new features we are showcasing today is the creation
 of Sound Effects!
 
-This is a new feature we've added to MicroPython and we'd love to see what you
-can do with it.
+This is a new feature we just added to MicroPython and we'd love to see what
+you can do with it.
 
-We are in the process of making the pre-build Sound Effect that will ship with
-MicroPython for the micro:bit, for users to  start with, so if you have a good SoundEffect you'd like to suggest, please
+We are in the process of making the pre-build Sound Effect that will ship by
+default with MicroPython for the micro:bit, so if you have a good SoundEffect
+you'd like to suggest, please
 [submit them here](https://microbit-carlos.github.io/microbit-bird-activity/submitse/).
