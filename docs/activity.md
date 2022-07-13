@@ -11,11 +11,13 @@ Let's bring our bird alive with code!
 
 <img width="30%" alt="microbit-universal-hex logo" src="/microbit-bird-activity/img/bird-with-microbit.jpg" align="right">
 
-Your task is to think like a bird and programme the micro:bit to react to the world like a bird.
+We're building a beautiful flock of unique, original birds.
 
-The micro:bit can communicate wirelessly with other micro:bits using radio.
+Your job, as a creator of one of the flock, is to think like a bird and programme the micro:bit to react to the world like a bird. You might also find that you have responsibilities to the flock, too, like sharing useful information.
+
+The micro:bit can communicate wirelessly with other micro:bits using [radio](https://microbit-micropython.readthedocs.io/en/v1.0.1/tutorials/radio.html#radio).
 There will be a secret micro:bit in the room broadcasting radio messages to
-all the birds indicating different events like "saying hello" o "there is a cat
+all the birds indicating different events like "saying hello" or "there is a cat
 around".
 
 Apart from that, the micro:bit contains other sensors that your bird will react
