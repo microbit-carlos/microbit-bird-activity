@@ -37,7 +37,7 @@ If you have a Sound Effect you'd like to submit you can follow these steps:
     - The MicroPython source code is under the MIT license, so using this
       license for the contributions is the easiest option
 - Replace the "Your-name-goes-here" placeholder in the copyright line with
-  name
+  your name
 - You can add as many Sound Effects as you like into the same file
 - Remember to play them at the bottom of the file
 - Submit the PR 

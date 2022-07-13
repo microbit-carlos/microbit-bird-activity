@@ -51,7 +51,8 @@ You can find more info about the microphone in the <a href="https://microbit-mic
 Now make a noise, like a clap, near the microphone and watch your bird get
 startled!
 
-Hint: If the conference area is too loud, you can blow on the microphone.
+Hint: If the conference area is too loud, you can blow on the microphone or
+change the loud threshold with a `microphone` method.
 
 
 ## Sending a Hello radio message
@@ -61,7 +62,7 @@ saying `hello`, or seeing a `cat`.
 
 How does this work?
 
-The micro:bit ration is uses to broadcast and receive these messages.
+The micro:bit radio is used to broadcast and receive these messages.
 
 Let's look at the `warn_about_cat()` function towards the bottom of the
 `bird.py` file:

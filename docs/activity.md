@@ -21,7 +21,9 @@ all the birds indicating different events like "saying hello" or "there is a cat
 around".
 
 Apart from that, the micro:bit contains other sensors that your bird will react
-to, for example, birds don't like to be shaken!
+to, for example, birds don't like to be shaken! (we assume... no birds were
+harmed in the making of this workshop - though they may have been subjected
+to some unpleasant sounds from nearby micro:bits!).
 
 To programme the micro:bit with Python we use 
 [MicroPython (click here for more info)](https://microbit-carlos.github.io/microbit-bird-activity/micropython/)
@@ -116,14 +118,18 @@ Some examples of thing you can do can be found in the
 <a href="https://microbit-carlos.github.io/microbit-bird-activity/micropython/#quick-things-to-do-with-the-microbit" target="_blank">MicroPython page</a>.
 </p>
 
-We also want to warn other birds around us,
-let's do that by adding by this line at the end of the function :
+Assuming we're the kind of bird that likes our local fellow birds, we also
+want to warn other birds around us, let's do that by adding by this line at
+the end of the function:
 
 ```python
 bird.warn_about_cat()
 ```
 
 [Solution](https://github.com/microbit-carlos/microbit-bird-activity/tree/main/solutions/2-cat.md)
+
+There are move events to explore, have a look at the
+[More events, more sounds](#more-events-more-sounds) section.
 
 
 ## Bird state
@@ -159,9 +165,20 @@ the bird is "angry".
 
 ## SoundEffects
 
-But hold on. What's with all these images on screens? Aside from their uncanny ability to fly (sorry Kiwi, Ostrich, Kakapo, Penguin, etc :( ) birds are probably most famous for the sounds they make
+But hold on. What's with all these images on screens? Aside from their
+uncanny ability to fly (sorry Kiwi, Ostrich, Kakapo, Penguin, etc :( )
+birds are probably most famous for the sounds they make.
 
-The micro:bit V2 has a built-in speaker, and a lot of the fun of building birds is giving them a unique voice.
+The micro:bit V2 has a built-in speaker, and a lot of the fun of building
+birds is giving them a unique voice.
+
+To do that we can create instances of the `SoundEffect` class from the
+`audio` module, which can be played with the `audio.play()` function.
+
+The arguments to `SoundEffect` describe how the sound is generated, indicating
+the duration of the sound, its starting and end frequency and volume,
+their rate of change over time (`interpolation`), the wave type,
+and any additional effects applied to the sound generation (`fx`).
 
 ```python
 audio.play(audio.SoundEffect(
@@ -176,7 +193,20 @@ audio.play(audio.SoundEffect(
 ))
 ```
 
+You can play this `SoundEffect`, and change some of the values to see how that
+changes the sound.
+
+Info on the current implementation can be found in this preview of the docs:
+[https://microbit-micropython--753.org.readthedocs.build/en/753/audio.html](https://microbit-micropython--753.org.readthedocs.build/en/753/audio.html)
+
+This feature is still being developed, so feedback is welcomed!
+
+
+### Trying Sound Effects in the REPL
+
 The Python REPL is a great place to quickly try some Python code.
+Even though the micro:bit is small, it's running MicroPython, which gives you
+full access to a REPL.
 
 To use the REPL, first connect to the micro:bit with the "Send to micro:bit"
 button. And then press the "Show serial" on the right of the dark box:
