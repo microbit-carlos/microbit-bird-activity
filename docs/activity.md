@@ -83,8 +83,9 @@ There are several events the bird can react to, and seeing a cat is quite import
 Exercise: <br>
 Let's copy and paste the "hello" example and replace the function name to
 `cat()` and change the decorator argument from "hello" to "cat".
-
+<br>
 What do you think the bird should do in this case?
+<br>
 Some examples of thing you can do can be found in the
 <a href="https://microbit-carlos.github.io/microbit-bird-activity/micropython/#quick-things-to-do-with-the-microbit">MicroPython page</a>.
 </p>
@@ -113,7 +114,7 @@ while True:
 Exercise: <br>
 Birds don't like to be shaken, so "angry" can also be one of the bird states
 to programme.
-
+<br>
 Let's expand that "if" statement with an "elif" and do something when the bird
 is "angry".
 </p>
@@ -141,6 +142,63 @@ audio.play(audio.SoundEffect(
 <p class="exercise">
 Exercise: <br>
 Can you come up with an "angry" sound for the bird state?
+And the cat event?
+</p>
+
+There is no "solution" for this exercise, be as creative as you'd like!
+Try playing multiple sounds one after another to make a longer cooler sound 📢. 
+
+
+## Expanding the states
+
+Look at `bird.py`, find the `current_state()` function:
+
+```python
+def current_state():
+    # Check for motion
+    if __mb.accelerometer.was_gesture('shake'):
+        return 'angry'
+    # How would you create a new "I fell down" event?
+    # A list of gestures can be found in the docs:
+    # https://microbit-micropython.readthedocs.io/en/v2-docs/accelerometer.html
+
+    __mb.sleep(10)   # Ensure run_every/gestures have a chance to run
+    return "chill"
+```
+
+<p class="exercise">
+Exercise: <br>
+Bird can be noisy, but they don't like loud sounds themselves!
+The micro:bit has a microphone which can detect a loud noise,
+so let's create a new state: `"startled"`
+
+Add another if statement inside `current_state()` before the `__mb.sleep(10)`
+line, and check if there was a loud event to return the `startled` event.
+
+You can find more info about the microphone in the <a href="https://microbit-micropython.readthedocs.io/en/v2-docs/microphone.html" target="_blank">Microphone documentation</a>.
+</p>
+
+Now make a noise near the microphone and see your bird get startled!
+
+Hint: If the conference area is too loud, you can blow on the microphone.
+
+
+## Sending a Hello radio message
+
+```python
+def warn_about_cat():
+    # Impose a delay before warning others
+    __mb.sleep(__rand.randint(500,1500))
+    __radio.send("cat->all")
+```
+
+<p class="exercise">
+Exercise: <br>
+Let's create a new function that warns all birds that there is a new cat
+nearby.
+
+You can call that function inside the `main.py` `hello()` function, and see
+other birds react to yours.
 </p>
 
 
