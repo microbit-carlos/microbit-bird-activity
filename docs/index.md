@@ -8,7 +8,20 @@ Hi! 👋
 
 Welcome to the micro:bit Bird Activity page.
 
+## What will we do today? 🤷‍♂️
+
+With this micro:bit activity we will:
+
+1. Build a bird, with pipe cleaners (optional but really fun!)
+2. Program the bird with the help of a `bird.py` module
+    - And we are going to use the new micro:bit Python Editor!
+3. Think like a bird and decide how a  bird reacts to events in the world and
+  as part of the flock
+
+
 ## Website Navigation 🧭
+
+But first, let's make sure we can find where things are.
 
 We tried to make the contents of this website easy to find, but if something is
 missing or hard to find look around for one of the micro:bit helpers and

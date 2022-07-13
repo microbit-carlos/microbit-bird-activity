@@ -31,10 +31,9 @@ and brand new
 
 Okay, so the first step is to open this link to the Python Editor.
 This link contains a flag to enable additional beta features:
-[https://python.microbit.org/v/beta?flag=audioSoundEffect](https://python.microbit.org/v/beta?flag=audioSoundEffect)
+<a href="https://python.microbit.org/v/beta?flag=audioSoundEffect" target="_blank">https://python.microbit.org/v/beta?flag=audioSoundEffect</a>
 
-To start the activity we first need to load a project hex file into the editor
-with some starter code.
+To start the activity we first need to load a project hex file into the editor.
 
 Right click on this link and select "Save Link As" to save the hex file to your
 laptop: [https://github.com/microbit-carlos/microbit-bird-activity/raw/main/src/bird/bin/flockbird.hex](https://github.com/microbit-carlos/microbit-bird-activity/raw/main/src/bird/bin/flockbird.hex)
@@ -45,7 +44,7 @@ accept it.
 
 ### So... What am I looking at?
 
-The loaded hex file contains two files, to see them let's go to "Project"
+The loaded hex file contains two Python files, to see them let's go to "Project"
 section on the left sidebar:
 
 ![Python Editor Projects](img/editor-project.png)
@@ -64,7 +63,7 @@ The sidebar also have other useful sections:
 - Reference: A place to explore the features of your micro:bit with Python
 - API: The micro:bit MicroPython API developer documentation
 
-<img width="45%" alt="microbit-universal-hex logo" src="/microbit-bird-activity/img/editor-references.png">
+<img width="45%" alt="microbit-universal-hex logo" src="/microbit-bird-activity/img/editor-reference.png">
 <img width="45%" alt="microbit-universal-hex logo" src="/microbit-bird-activity/img/editor-api.png">
 
 
@@ -100,7 +99,7 @@ There are several events the bird can react to, and seeing a cat is quite import
 <p class="exercise">
 Exercise: <br>
 Let's copy and paste the "hello" example, replace the function name to
-`cat()` and change the decorator argument from "hello" to "cat".
+`cat()`, and change the decorator argument from "hello" to "cat".
 <br>
 What do you think the bird should do in this case?
 <br>
