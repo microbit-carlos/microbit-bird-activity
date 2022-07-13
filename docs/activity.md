@@ -87,7 +87,7 @@ Let's copy and paste the "hello" example, replace the function name to
 What do you think the bird should do in this case?
 <br>
 Some examples of thing you can do can be found in the
-<a href="https://microbit-carlos.github.io/microbit-bird-activity/micropython/#quick-things-to-do-with-the-microbit">MicroPython page</a>.
+<a href="https://microbit-carlos.github.io/microbit-bird-activity/micropython/#quick-things-to-do-with-the-microbit" target="_blank">MicroPython page</a>.
 </p>
 
 We also want to warn other birds around us, let's do that adding by this line
@@ -133,7 +133,8 @@ the bird is "angry".
 
 ## SoundEffects
 
-TODO: Need to explain this.
+TODO: Need to explain this, and make it appeling for users to spend most of
+the time here.
 
 ```python
 audio.play(audio.SoundEffect(
@@ -158,7 +159,7 @@ There is no "solution" for this exercise, be as creative as you'd like!
 Have you tried playing multiple sounds one after another?
 You can make an ever longer cooler sound 📢. 
 
-TODO: Add some of the `micro.Sound.xxx` built in sounds here.
+TODO: Update this example to recreate a `micro.Sound.xxx` built in.
 
 ```python
 effect_one = audio.SoundEffect(
@@ -199,81 +200,11 @@ audio.play(effect_two, wait=False)
 audio.play(effect_three, wait=False)
 ```
 
-
-## Expanding the states
-
-TODO: Intro
-
-Look at `bird.py`, find the `current_state()` function:
-
-```python
-def current_state():
-    # Check for motion
-    if __mb.accelerometer.was_gesture('shake'):
-        return 'angry'
-    # How would you create a new "I fell down" event?
-    # A list of gestures can be found in the docs:
-    # https://microbit-micropython.readthedocs.io/en/v2-docs/accelerometer.html
-
-    __mb.sleep(10)   # Ensure run_every/gestures have a chance to run
-    return "chill"
-```
-
-<p class="exercise">
-Exercise: <br>
-Birds can be noisy, but they don't like loud sounds themselves!
-The micro:bit has a microphone, and we can use it to detect loud noises,
-so let's create a new state: "startled"
-
-Let's add another if statement inside the
-<code class="language-plaintext highlighter-rouge">current_state()</code>
-function in the <code class="language-plaintext highlighter-rouge">bird.py</code> 
-file.
-And if there was a "loud" event the function returns the `startled` state.
-
-You can find more info about the microphone in the <a href="https://microbit-micropython.readthedocs.io/en/v2-docs/microphone.html" target="_blank">Microphone documentation</a>.
-</p>
-
-[Solution](https://github.com/microbit-carlos/microbit-bird-activity/tree/main/solutions/4-bird-startled.md)
-
-Now make a noise near the microphone and see your bird get startled!
-
-Hint: If the conference area is too loud, you can blow on the microphone.
-
-
-## Sending a Hello radio message
-
-TODO: Into
-
-Let's look at the `warn_about_cat()` function towards the bottom of the
-`bird.py` file:
-
-```python
-def warn_about_cat():
-    # Impose a delay before warning others
-    __mb.sleep(__rand.randint(500,1500))
-    __radio.send("cat->all")
-```
-
-TODO: Explain the message `->all`.
-
-<p class="exercise">
-Exercise: <br>
-Let's create a new function that warns all birds that there is a new cat
-nearby.
-
-You can call that function inside the `main.py` `hello()` function, and see
-other birds react to yours.
-</p>
-
-[Solution](https://github.com/microbit-carlos/microbit-bird-activity/tree/main/solutions/5-bird-hello-everyone.md)
-
-
 ## TODO
 
 Things that will be included here:
-- Quick overview of the micro:bit
-- Explain there are also a new Sound Effect system and provide example
-- Make it more playful
-- Proofread it
-- What else?
+- [ ] Quick overview of the micro:bit
+- [ ] Explain there are also a new Sound Effect system and provide example
+- [ ] Make it more playful
+- [ ] Proofread it
+- [ ] What else?
