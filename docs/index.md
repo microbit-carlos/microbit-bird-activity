@@ -23,13 +23,23 @@ With this micro:bit activity we will:
 
 To go through this activity you'll need:
 
+
+What we need you to bring:
+
 - 1 laptop with a web browser and a USB port
     - A Chrome based browser works best for direct connection to the micro:bit
       but it is not necessary.
+    - A USB-A port or an adaptor for one is ideal, but we may have some spare adaptors
+    
+What we can loan you:
+
 - 1 micro:bit
 - 1 USB cable
     - If you only have USB C ports let us know as we have a few adaptors
 - 1 battery holder (optional)
+
+What you can keep!
+
 - 1 bird of your making (optional, but really fun!)
 
 
