@@ -47,6 +47,8 @@ What you can keep!
 
 For this activity we are going to use the brand new micro:bit Python Editor.
 
+The editor is still in beta, so we'd also love you to think about how we could improve it and make suggestions. It's designed primarily students in schools, but we think it's pretty useful for anyone who wants to code with Python and the BBC micro:bit
+
 On top of that, we are going to load it with a special flag to enable even
 more new features, which you will be one of the first people to check out!
 
