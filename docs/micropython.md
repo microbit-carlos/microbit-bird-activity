@@ -16,6 +16,7 @@ SoundEffect:
 #quick-things-to-do-with-the-microbit
 
 Display one of the built-in images (more info [here](https://microbit-micropython.readthedocs.io/en/v2-docs/tutorials/images.html)):
+
 ```python
 from microbit import *
 
@@ -24,7 +25,7 @@ display.show(Image.HAPPY)
 
 Play one of the built-in sounds (full list [here](https://microbit-micropython.readthedocs.io/en/v2-docs/audio.html#built-in-sounds-v2)):
 
-```
+```python
 from microbit import *
 
 audio.play(Sound.HAPPY)
@@ -40,7 +41,7 @@ music.play(music.BIRTHDAY)
 
 Make your own music tune (more info [here](https://microbit-micropython.readthedocs.io/en/v2-docs/tutorials/music.html)):
 
-```
+```python
 import music
 
 tune = ["C4:4", "D4:4", "E4:4", "C4:4", "C4:4", "D4:4", "E4:4", "C4:4",
@@ -50,7 +51,7 @@ music.play(tune)
 
 Speak (more info [here](https://microbit-micropython.readthedocs.io/en/v2-docs/tutorials/speech.html)):
 
-```
+```python
 import speech
 
 speech.say("Hello, World")

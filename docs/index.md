@@ -78,4 +78,11 @@ Check out the [Coding Activity page](activity).
 ## Make some noise! 🔊
 
 One of the other brand new features we are showcasing today is the creation
-of Sound 
+of Sound Effects!
+
+This is a new feature we've added to MicroPython and we'd love to see what you
+can do with it.
+
+We are in the process of making the pre-build Sound Effect that will ship with
+MicroPython for the micro:bit, for users to  start with, so if you have a good SoundEffect you'd like to suggest, please
+[submit them here](https://microbit-carlos.github.io/microbit-bird-activity/submitse/).
