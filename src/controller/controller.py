@@ -8,6 +8,8 @@ active_birds = dict({
     "fake_bird": running_time()
 })
 MSG_DELIMITER = "->"
+RADIO_GROUP_HELLO = 1
+RADIO_GROUP_BIRDS = 17
 
 
 def check_birds():
@@ -26,8 +28,8 @@ def check_birds():
 
 
 bird_check = check_birds()
-@run_every(s=30)
-#@run_every(s=5)
+#@run_every(s=30)
+@run_every(s=10)
 def check_next_bird():
     # First say hello to the next bird in the list
     next(bird_check)
@@ -52,7 +54,7 @@ def radio_send_group(msg, send_to="all"):
     :param send_to: Bird ID to send to a single bird, "all" to send to all the
                     birds, or a falsy value to send to a random bird.
     """
-    radio.config(group=17, power=7)
+    radio.config(group=RADIO_GROUP_BIRDS, power=7)
     if not send_to:
         global active_birds
         bird_list = list(active_birds.keys())
@@ -64,7 +66,7 @@ def radio_send_group(msg, send_to="all"):
     msg = "{}{}{}".format(msg, MSG_DELIMITER, send_to)
     print("radio send: {}".format(msg))
     radio.send(msg)
-    radio.config(group=1, power=7)
+    radio.config(group=RADIO_GROUP_HELLO, power=7)
 
 
 def reset_all():
@@ -91,14 +93,14 @@ def process_radio_msg(radio_msg):
         # Add new entry or update timestamp with last time we heard this bird
         active_birds[msg_split[1]] = running_time()
         # Send message back to let the bird know it's registered
-        radio.send(radio_received)
+        radio.send(radio_msg)
     else:
         print("Unexpected msg start: {}".format(msg_split[0]))
 
 
 # Turn on the radio and set group 1 to listen for new birds
 radio.on()
-radio.config(group=1, power=7, queue=10)
+radio.config(group=RADIO_GROUP_HELLO, power=7, queue=10)
 
 print("🚀 Programme starting...")
 reset_all()
