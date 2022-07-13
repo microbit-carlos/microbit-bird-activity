@@ -19,20 +19,6 @@ With this micro:bit activity we will:
   as part of the flock
 
 
-## Website Navigation 🧭
-
-But first, let's make sure we can find where things are.
-
-We tried to make the contents of this website easy to find, but if something is
-missing, hard to find, or broken, please look around for one of the micro:bit
-helpers and we'll be happy to help with anything and update the website.
-
-In short:
-
-- ⬅️ The navigation menu on the left has a link to each available page
-- ➡️ Each page has a table of contents on the right to jump to each section
-
-
 ## What you'll need ☑️
 
 To go through this activity you'll need:
@@ -86,7 +72,7 @@ of Sound Effects!
 This is a new feature we just added to MicroPython and we'd love to see what
 you can do with it.
 
-We are in the process of making the pre-build Sound Effect that will ship by
+We are in the process of making the pre-built Sound Effect that will ship by
 default with MicroPython for the micro:bit, so if you have a good SoundEffect
 you'd like to suggest, please
 [submit them here](https://microbit-carlos.github.io/microbit-bird-activity/submitse/).
