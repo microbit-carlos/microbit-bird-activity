@@ -17,20 +17,20 @@ With this micro:bit activity we will:
     - We are going to use the new micro:bit Python Editor!
 3. Think like a bird and decide how a  bird reacts to events in the world and
   as part of the flock
+4. Along the way, make some super cool sounds with a new synthesizer feature,
+  and submit them for consideration as new default sounds!
 
 
 ## What you'll need ☑️
-
-To go through this activity you'll need:
-
 
 What we need you to bring:
 
 - 1 laptop with a web browser and a USB port
     - A Chrome based browser works best for direct connection to the micro:bit
       but it is not necessary.
-    - A USB-A port or an adaptor for one is ideal, but we may have some spare adaptors
-    
+    - A USB-A port or an adaptor for one is ideal, but we may have some spare
+      adaptors
+
 What we can loan you:
 
 - 1 micro:bit
