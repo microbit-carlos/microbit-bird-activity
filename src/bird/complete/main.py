@@ -6,7 +6,7 @@ import bird
 
 # Your bird will react to events in their environment via decorators like the
 # one below this comment. You can modify this example and create new ones for
-# all the other events: "hello", "cat", "hawk", "food", "dawn", "dusk"
+# all the other events: "hello", "cat", "hawk", "dawn", "dusk"
 
 @bird.react("hello")
 def hello():
@@ -39,6 +39,7 @@ def dusk():
     display.show(Image.CONFUSED)
     audio.play(Sound.SPRING)
 
+
 # Other things can also happen to our birds, check its mood and act accordingly 
 while True:
     if button_a.is_pressed():
@@ -58,5 +59,8 @@ while True:
         display.show(Image.HAPPY)
     elif bird_mood == "angry":
         display.show(Image.ANGRY)
+    elif bird_mood == "startled":
+        display.show(Image.SURPRISED)
     # What other moods we can react to in here? Let's try "angry"
-    sleep(100)
+
+    sleep(200)

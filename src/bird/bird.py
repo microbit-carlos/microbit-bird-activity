@@ -12,7 +12,6 @@
 #     - ...extend your bird by editing the bird.py file!
 #
 # The bird can also
-#     - food: time for dinner
 #     - squawk: something loud happened
 #     - motion: some kind of movement happened
 #     - chill: nothing is happening, rest
@@ -30,7 +29,7 @@ __RADIO_GROUP_GREETINGS = 1
 __RADIO_GROUP_BIRDS = 17
 
 # Defined radio messages to react to
-_events = ["hello", "cat", "hawk", "food", "dawn", "dusk"]
+_events = ["hello", "cat", "hawk", "dawn", "dusk"]
 
 
 class react():
@@ -138,7 +137,10 @@ def __process_world(message):
     print("👂 I've heard something: {}".format(message))
     # First we run any code specific for the message
     msg_type = msg_split[0]
-    if msg_type == "greetings":
+    if msg_type == "reset":
+        # Reset the board
+        __mb.reset()
+    elif msg_type == "greetings":
         __hi_everyone_i_am_here()
         # In this special case we want to run the "hello" callback as well
         msg_type = "hello"

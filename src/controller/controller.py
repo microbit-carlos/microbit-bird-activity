@@ -3,7 +3,7 @@ import random
 import radio
 
 
-msg_options = ["hello", "cat", "hawk", "food", "dawn", "dusk"]
+msg_options = ["hello", "cat", "hawk", "dawn", "dusk"]
 active_birds = dict({
     "fake_bird": running_time()
 })
