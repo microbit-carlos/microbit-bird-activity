@@ -6,23 +6,23 @@ These are some additional exercises you can do on top of the
 [previous activity steps](https://microbit-carlos.github.io/microbit-bird-activity/activity/).
 
 
-## Expanding the states
+## Expanding the moods
 
-In `main.py` we've checked the bird state using the `bird.current_state()`
+In `main.py` we've checked the bird mood using the `bird.current_mood()`
 function:
 
 ```python
 while True:
-    bird_state = bird.current_state()
-    if bird_state == "chill":
+    bird_mood = bird.current_mood()
+    if bird_mood == "chill":
         display.show(Image.HAPPY)
 ```
 
 How does that work? Let's look at the `bird.py` file, and find the
-`current_state()` function:
+`current_mood()` function:
 
 ```python
-def current_state():
+def current_mood():
     # Check for motion
     if __mb.accelerometer.was_gesture('shake'):
         return 'angry'
@@ -35,13 +35,13 @@ def current_state():
 Exercise: <br>
 Birds can be noisy, but they don't like loud sounds themselves!
 The micro:bit has a microphone, and we can use it to detect loud noises,
-so let's create a new state: "startled".
+so let's create a new mood: "startled".
 <br>
 Let's add another if statement inside the
-<code class="language-plaintext highlighter-rouge">current_state()</code>
+<code class="language-plaintext highlighter-rouge">current_mood()</code>
 function inside the
 <code class="language-plaintext highlighter-rouge">bird.py</code>  file.
-So, if there was a "loud" event, the function can return the `startled` state.
+So, if there was a "loud" event, the function can return the `startled` mood.
 <br>
 You can find more info about the microphone in the <a href="https://microbit-micropython.readthedocs.io/en/v2-docs/microphone.html" target="_blank">Microphone documentation</a>.
 </p>

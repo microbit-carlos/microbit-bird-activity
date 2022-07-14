@@ -1,7 +1,7 @@
-# Adding A New Bird State: `startled`
+# Adding A New Bird Mood: `startled`
 
 ```python
-def current_state():
+def current_mood():
     # Check for motion
     if __mb.accelerometer.was_gesture('shake'):
         return 'angry'

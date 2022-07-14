@@ -21,11 +21,11 @@ def cat():
     pass
 
 
-# Other things can also happen to our birds, check its state and act accordingly 
+# Other things can also happen to our birds, check its mood and act accordingly 
 while True:
     # Look inside yourself and listen, how is your bird feeling?
-    bird_state = bird.current_state()
-    if bird_state == "chill":
+    bird_mood = bird.current_mood()
+    if bird_mood == "chill":
         display.show(Image.HAPPY)
-    # What other states we can react to in here? Let's try "angry"
+    # What other moods we can react to in here? Let's try "angry"
     sleep(100)

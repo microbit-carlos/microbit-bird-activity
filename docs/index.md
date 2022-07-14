@@ -50,7 +50,10 @@ What you can keep!
 
 For this activity we are going to use the brand new micro:bit Python Editor.
 
-The editor is still in beta, so we'd also love you to think about how we could improve it and make suggestions. It's designed primarily students in schools, but we think it's pretty useful for anyone who wants to code with Python and the BBC micro:bit
+The editor is still in beta, so we'd also love you to think about how we
+could improve it and make suggestions. It's designed primarily for students
+in schools, but we think it's pretty useful for anyone who wants to code with
+Python and the BBC micro:bit.
 
 On top of that, we are going to load it with a special flag to enable even
 more new features, which you will be one of the first people to check out!
@@ -65,11 +68,10 @@ You can find more information about the editor in the
 
 And we are going to make some birds using some craft supplies.
 
-Don't worry, if this is not your thing you can still try all this would the
+Don't worry, if this is not your thing you can still try all this without the
 bird, but it is a lot more fun with one!
 
-To see some bird making examples see the 
-[Bird Pipe Cleaners page](birdcraft).
+To see some bird making examples see the [Bird Pipe Cleaners page](birdcraft).
 
 
 ## Coding Activity 👩‍💻

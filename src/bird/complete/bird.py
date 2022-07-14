@@ -148,7 +148,7 @@ def __process_world(message):
     return
 
 
-def current_state():
+def current_mood():
     # Check the motion sensor to see if we are angering the bird
     if __mb.accelerometer.was_gesture("shake"):
         return "angry"

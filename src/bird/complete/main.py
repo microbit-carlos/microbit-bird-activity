@@ -39,7 +39,7 @@ def dusk():
     display.show(Image.CONFUSED)
     audio.play(Sound.SPRING)
 
-# Other things can also happen to our birds, check its state and act accordingly 
+# Other things can also happen to our birds, check its mood and act accordingly 
 while True:
     if button_a.is_pressed():
         display.show(Image.ARROW_N)
@@ -53,10 +53,10 @@ while True:
         display.scroll(my_name)
 
     # Look inside yourself and listen, how is your bird feeling?
-    bird_state = bird.current_state()
-    if bird_state == "chill":
+    bird_mood = bird.current_mood()
+    if bird_mood == "chill":
         display.show(Image.HAPPY)
-    elif bird_state == "angry":
+    elif bird_mood == "angry":
         display.show(Image.ANGRY)
-    # What other states we can react to in here? Let's try "angry"
+    # What other moods we can react to in here? Let's try "angry"
     sleep(100)

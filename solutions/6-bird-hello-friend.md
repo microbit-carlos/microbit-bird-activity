@@ -18,10 +18,10 @@ while True:
         sleep(500)
     elif button_b.is_pressed():
         my_name = bird.friendly_name()
-        display.scroll(my_name)
         print("My bird name is: {}".format(my_name))
+        display.scroll(my_name)
 
     # Look inside yourself and listen, how is your bird feeling?
-    bird_state = bird.current_state()
+    bird_mood = bird.current_mood()
     ...
 ```

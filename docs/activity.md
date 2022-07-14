@@ -147,7 +147,7 @@ There are move events to explore, have a look at the
 [More events, more sounds](#more-events-more-sounds) section.
 
 
-## Bird state
+## Bird Mood
 
 We've learned how to react to environment events (received via micro:bit
 radio), what about things that happen directory to our bird?
@@ -157,25 +157,25 @@ Let's look further down `main.py` and we'll find this infinite loop.
 ```python
 while True:
     # Look inside yourself and listen, how is your bird feeling?
-    bird_state = bird.current_state()
-    if bird_state == "chill":
+    bird_mood = bird.current_mood()
+    if bird_mood == "chill":
         display.show(Image.HAPPY)
     sleep(100)
 ```
 
-The function `bird.current_state()` uses the micro:bit on board sensors to
+The function `bird.current_mood()` uses the micro:bit on board sensors to
 figure how your bird is doing.
 
 <p class="exercise">
 Exercise: <br>
-Birds don't like to be shaken, so "angry" can also be one of the bird states
+Birds don't like to be shaken, so "angry" can also be one of the bird moods
 to code.
 <br>
 Let's expand that "if" statement with an "elif" and do something else when
 the bird is "angry".
 </p>
 
-[Solution](https://github.com/microbit-carlos/microbit-bird-activity/tree/main/solutions/3-state-angry.md)
+[Solution](https://github.com/microbit-carlos/microbit-bird-activity/tree/main/solutions/3-mood-angry.md)
 
 
 ## SoundEffects
@@ -240,7 +240,7 @@ code you like, and it will execute it inmediately:
 
 <p class="exercise">
 Exercise: <br>
-Can you come up with an "angry" sound for the bird state?
+Can you come up with an "angry" sound for the bird mood?
 What kind of sound would a bird make if they spot a cat?
 </p>
 

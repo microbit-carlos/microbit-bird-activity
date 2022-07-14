@@ -18,6 +18,6 @@ while True:
         sleep(500)
 
     # Look inside yourself and listen, how is your bird feeling?
-    bird_state = bird.current_state()
+    bird_mood = bird.current_mood()
     ...
 ```
