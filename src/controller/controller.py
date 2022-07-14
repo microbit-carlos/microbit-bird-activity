@@ -121,25 +121,18 @@ while True:
 
     # Use buttons to select message to send out
     if button_a.is_pressed() and button_b.is_pressed():
-        # A & B send a message out
-        if pin0.is_touched():
-            # pin0 pressed for the message to be sent to a single random bird
-            display.show("R")
-            radio_send_group(msg_options[i], send_to=False)
-        else:
-            # pin0 not touch to send message to all birds
-            display.show("A")
-            radio_send_group(msg_options[i], send_to="all")
-        sleep(500)
+        # A & B send a message to be sent to a single random bird
+        display.show("R")
+        radio_send_group(msg_options[i], send_to=False)
     elif button_a.is_pressed():
-        # Button A to decrease selection
-        i = i - 1 if i > 0 else len(msg_options) - 1
+        # Button A to increase selection
+        i = i + 1 if i < (len(msg_options) - 1) else 0
         display.show(i)
         sleep(500)
     elif button_b.is_pressed():
-        # Button B to increase selection
-        i = i + 1 if i < (len(msg_options) - 1) else 0
-        display.show(i)
+        # Button B to send message to all 
+        display.show("A")
+        radio_send_group(msg_options[i], send_to="all")
         sleep(500)
     elif pin2.is_touched():
         # Scroll the message on the display when pin2 is touched
@@ -150,8 +143,8 @@ while True:
     # Run a random event
     if running_time() > next_event:
         rand_event = random.choice(msg_options)
-        print("🎲 Send random event: {}".format(rand_event))
-        radio_send_group(rand_event, "all")
+        print("🎲 Send random event to random bird: {}".format(rand_event))
+        radio_send_group(rand_event, None)
         next_event = running_time() + TIME_BETWEEN_EVENTS
 
-    sleep(100)
+    sleep(200)
