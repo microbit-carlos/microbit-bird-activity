@@ -8,6 +8,9 @@ Hi! 👋
 
 Welcome to the micro:bit Bird Activity page.
 
+![micro:bit and birds](img/microbit-birds-banner.png)
+
+
 ## What will we do today? 🤷‍♂️
 
 With this micro:bit activity we will:

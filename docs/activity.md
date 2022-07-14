@@ -126,7 +126,10 @@ Let's do the following:<br>
 <br>
 What do you think the bird should do in this case?
 <br>
-Some examples of thing you can do can be found in the
+For some examples of thing you can output with the micro:bit, check out the
+"Display" and the "Sound" sections of the Editor "Reference" left side bar.
+<br>
+You can also find a quick list of snippets in the
 <a href="https://microbit-carlos.github.io/microbit-bird-activity/micropython/#quick-things-to-do-with-the-microbit" target="_blank">MicroPython page</a>.
 </p>
 

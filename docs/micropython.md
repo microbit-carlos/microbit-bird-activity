@@ -1,23 +1,31 @@
 # MicroPython on the BBC micro:bit
 
-Need to add some content here.
-- Thank all the MicroPython contributors
+We have Python on the micro:bit thanks to Damien George's
+[MicroPython](https://micropython.org/), and all of its contributors 
+([one](https://github.com/bbcmicrobit/micropython/graphs/contributors),
+[two](https://github.com/microbit-foundation/micropython-microbit-v2/graphs/contributors),
+[three](https://github.com/micropython/micropython/graphs/contributors)). For
+a history of how this came to be, Nicholas Tollervey also has a great post
+on his blog:
+[The Story of MicroPython on the BBC micro:bit](https://ntoll.org/article/story-micropython-on-microbit/)
 
 ![MicroPython comic](https://microbit-micropython.readthedocs.io/en/v2-docs/_images/comic.png)
 
-Links:
-- https://microbit.org/get-started/user-guide/python/
-- https://github.com/microbit-foundation/micropython-microbit-v2
-- https://microbit-micropython.readthedocs.io/en/v2-docs/
+These are useful links to find out how to use MicroPython on the micro:bit:
+- [micro:bit MicroPython docs](https://microbit-micropython.readthedocs.io/en/v2-docs/)
+- [microbit.org Python User Guide](https://microbit.org/get-started/user-guide/python/)
 
-SoundEffect:
-- https://github.com/bbcmicrobit/micropython/pull/753
-- https://microbit-micropython--753.org.readthedocs.build/en/753/audio.html
+SoundEffect Information:
+- [GitHub PR with proposed user docs](https://github.com/bbcmicrobit/micropython/pull/753)
+- [Preview of the docs from the PR](https://microbit-micropython--753.org.readthedocs.build/en/753/audio.html)
+
+The micro:bit V2 MicroPython repository: [https://github.com/microbit-foundation/micropython-microbit-v2](https://github.com/microbit-foundation/micropython-microbit-v2)
 
 
 ## Quick things to do with the micro:bit
 
-#quick-things-to-do-with-the-microbit
+To "Reference" left side bar in the editor is the best place to find out more
+about the micro:bit features in MicroPython. But for a quick , these are a couple of quick snippets that output sound or images.
 
 Display one of the built-in images (more info [here](https://microbit-micropython.readthedocs.io/en/v2-docs/tutorials/images.html)):
 
@@ -61,8 +69,10 @@ import speech
 speech.say("Hello, World")
 ```
 
-Create your own sounds! More info here:
-https://microbit-micropython--753.org.readthedocs.build/en/753/audio.html
+Create your own sounds!
+
+More info here:
+[Preview of the proposal for the SoundEffect documentation](https://microbit-micropython--753.org.readthedocs.build/en/753/audio.html)
 
 ```python
 from microbit import *
