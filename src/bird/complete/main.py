@@ -59,8 +59,10 @@ while True:
         display.show(Image.HAPPY)
     elif bird_mood == "angry":
         display.show(Image.ANGRY)
+        sleep(200)
     elif bird_mood == "startled":
         display.show(Image.SURPRISED)
+        sleep(200)
     # What other moods we can react to in here? Let's try "angry"
 
     sleep(200)

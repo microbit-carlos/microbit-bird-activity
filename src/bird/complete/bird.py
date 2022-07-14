@@ -111,14 +111,13 @@ def friendly_name():
 def __check_radio_msgs():
     try:
         msg = __radio.receive()
-    except:
-        print("Warning: There was an unexpected error reading radio.")
-        return
-    try:
         if msg:
             __process_world(msg)
+            # We will only react to a single event and drop the rest of the messages
+            while msg:
+                msg = __radio.receive()
     except Exception as e:
-        print("Warning: There was an error processing the world")
+        print("Warning: There was an unexpected error reading/processing radio msg.")
         print(e)
 
 
@@ -154,7 +153,7 @@ def current_mood():
     # Check the motion sensor to see if we are angering the bird
     if __mb.accelerometer.was_gesture("shake"):
         return "angry"
-    if __mb.microphone.was_event() == __mb.SoundEvent.LOUD:
+    if __mb.microphone.was_event(__mb.SoundEvent.LOUD):
         return "startled"
     # How would you create a new "I fell down" event?
     # A list of gestures can be found in the docs:

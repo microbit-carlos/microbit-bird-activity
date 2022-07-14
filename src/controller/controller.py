@@ -122,15 +122,18 @@ while True:
     # Use buttons to select message to send out
     if button_a.is_pressed() and button_b.is_pressed():
         # A & B send a message to be sent to a single random bird
+        print("✉️ Send {} event to random birds.".format(msg_options[i]))
         display.show("R")
         radio_send_group(msg_options[i], send_to=False)
+        sleep(500)
     elif button_a.is_pressed():
         # Button A to increase selection
         i = i + 1 if i < (len(msg_options) - 1) else 0
         display.show(i)
         sleep(500)
     elif button_b.is_pressed():
-        # Button B to send message to all 
+        # Button B to send message to all
+        print("✉️ Send {} event to all birds.".format(msg_options[i]))
         display.show("A")
         radio_send_group(msg_options[i], send_to="all")
         sleep(500)
