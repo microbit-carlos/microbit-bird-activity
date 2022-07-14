@@ -15,3 +15,15 @@ header {
     font-weight: bold;
     line-height: 2.5rem;
 }
+
+/* A more prominent box */
+.important {
+    background-color: #f3ff001f;
+    border: 3px dashed #ffe800;
+    padding: 8px 16px 16px 16px;
+    margin: 6px;
+}
+.important::first-line {
+    font-weight: bold;
+    line-height: 2.5rem;
+}
