@@ -121,11 +121,11 @@ There are several events the bird can react to, and seeing a cat is quite import
 Exercise: <br>
 Let's do the following:<br>
 - Copy and paste the "hello" example <br>
-- Replace the function name to `cat()` <br>a
+- Replace the function name to `cat()`<br>
 - Change the decorator argument from "hello" to "cat".<br>
 <br>
 What do you think the bird should do in this case?
-<br>
+<br><br>
 For some examples of thing you can output with the micro:bit, check out the
 "Display" and the "Sound" sections of the Editor "Reference" left side bar.
 <br>
@@ -142,6 +142,13 @@ bird.warn_about_cat()
 ```
 
 [Solution](https://github.com/microbit-carlos/microbit-bird-activity/tree/main/solutions/2-cat.md)
+
+If you don't want to wait until a cat comes around, you can test your
+decorated function by executing it.
+
+Using the REPL is also really handy for calling your `cat()` function.
+Instructions on how to access the REPL are in the
+[Trying Sound Effects in the REPL section](#trying-sound-effects-in-the-repl).
 
 There are move events to explore, have a look at the
 [More events, more sounds](#more-events-more-sounds) section.
@@ -181,7 +188,7 @@ the bird is "angry".
 ## SoundEffects
 
 But hold on. What's with all these images on screens? Aside from their
-uncanny ability to fly (sorry Kiwi, Ostrich, Kakapo, Penguin, etc :( )
+uncanny ability to fly [sorry Kiwi, Ostrich, Kakapo, Penguin, etc :( ]
 birds are probably most famous for the sounds they make.
 
 The micro:bit V2 has a built-in speaker, and a lot of the fun of building

@@ -19,7 +19,7 @@ while True:
 ```
 
 How does that work? Let's look at the `bird.py` file, and find the
-`current_mood()` function:
+`current_mood()` function (it's around line 150):
 
 ```python
 def current_mood():
@@ -65,7 +65,7 @@ How does this work?
 The micro:bit radio is used to broadcast and receive these messages.
 
 Let's look at the `warn_about_cat()` function towards the bottom of the
-`bird.py` file:
+`bird.py` file (around line 180):
 
 ```python
 def warn_about_cat():

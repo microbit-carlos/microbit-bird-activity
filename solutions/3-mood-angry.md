@@ -8,6 +8,7 @@ while True:
         display.show(Image.HAPPY)
     elif bird_mood == "angry":
         display.show(Image.ANGRY)
+        sleep(200)    # A bit of extra time to show the Image
 
     sleep(100)
 ```

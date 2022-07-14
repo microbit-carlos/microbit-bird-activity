@@ -4,8 +4,6 @@ bird.py:
 
 ```python
 def say_hello_to_everyone():
-    # Impose a delay before warning others
-    __mb.sleep(__rand.randint(500,1500))
     __radio.send("hello->all")
 ```
 

@@ -1,6 +1,6 @@
 # MicroPython on the BBC micro:bit
 
-We have Python on the micro:bit thanks to Damien George's
+Python is possible in the micro:bit thanks to Damien George's
 [MicroPython](https://micropython.org/), and all of its contributors 
 ([one](https://github.com/bbcmicrobit/micropython/graphs/contributors),
 [two](https://github.com/microbit-foundation/micropython-microbit-v2/graphs/contributors),
