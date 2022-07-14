@@ -3,6 +3,8 @@
 Need to add some content here.
 - Thank all the MicroPython contributors
 
+![MicroPython comic](https://microbit-micropython.readthedocs.io/en/v2-docs/_images/comic.png)
+
 Links:
 - https://microbit.org/get-started/user-guide/python/
 - https://github.com/microbit-foundation/micropython-microbit-v2

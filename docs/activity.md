@@ -33,18 +33,30 @@ and brand new
 
 ## First steps - Load the starter project into the editor
 
+<p class="important">
+❗️ Important: <br>
+Using the version of the Python Editor linked in this section an the provided
+hex file are necessary to start the activity.
+</p>
+
 Okay, so the first step is to open this link to the Python Editor.
 This link contains a flag to enable additional beta features:
-<a href="https://python.microbit.org/v/beta?flag=audioSoundEffect" target="_blank">https://python.microbit.org/v/beta?flag=audioSoundEffect</a>
+
+<a href="https://python.microbit.org/v/beta?flag=audioSoundEffect" target="_blank">https://python.microbit.org/v/beta?flag=audioSoundEffect</a> 
+👈 🐍
 
 To start the activity we first need to load a project hex file into the editor.
 
 Right click on this link and select "Save Link As" to save the hex file to your
 laptop: [https://github.com/microbit-carlos/microbit-bird-activity/raw/main/src/bird/bin/flockbird.hex](https://github.com/microbit-carlos/microbit-bird-activity/raw/main/src/bird/bin/flockbird.hex)
 
+![Save as screenshot](img/saveas.png)
+
 And then drag and drop the hex file to the Python Editor. The editor might
 warn you that this action will replace the project, you can click "Replace" to
 accept it.
+
+![Gif showing how to drag and drop into the editpr](img/dragndrop.gif)
 
 ### So... What am I looking at?
 
@@ -193,13 +205,14 @@ audio.play(audio.SoundEffect(
 ))
 ```
 
-You can play this `SoundEffect`, and change some of the values to see how that
-changes the sound.
+You can play this `SoundEffect`, and then change some of the values to see
+how that changes the sound.
 
 Info on the current implementation can be found in this preview of the docs:
 [https://microbit-micropython--753.org.readthedocs.build/en/753/audio.html](https://microbit-micropython--753.org.readthedocs.build/en/753/audio.html)
 
-This feature is still being developed, so feedback is welcomed!
+Remember,this feature is still being developed so maybe not everything is quite
+working, so let us know if you find any issues, and feedback is encouraged!
 
 
 ### Trying Sound Effects in the REPL

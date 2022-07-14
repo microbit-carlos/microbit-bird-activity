@@ -29,7 +29,8 @@ students minds (or at least, expand them and bring a smile!).
 
 If you have a Sound Effect you'd like to submit you can follow these steps:
 
-- [Fork](https://github.com/microbit-carlos/microbit-bird-activity/fork) the https://github.com/microbit-carlos/microbit-bird-activity/
+- [Fork](https://github.com/microbit-carlos/microbit-bird-activity/fork) the
+  [https://github.com/microbit-carlos/microbit-bird-activity/](https://github.com/microbit-carlos/microbit-bird-activity/)
   repository
 - Create a copy of the `template.py` python file in the `sound-effect-examples`
   folder, and give it a new name.
