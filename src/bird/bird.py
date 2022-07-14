@@ -3,7 +3,8 @@
 # The bird notices several 'events' that can happen in their environment
 # and can react to them.
 # These events are processed via the @react("event_name") decorator in main.py
-#     - hello: new bird has arrived in the flock
+#     - : new bird has arrived in the flock
+#     - hello: friendly birds like to say hi to each other 
 #     - cat : predator below
 #     - hawk: predator above
 #     - dawn: time to wake up
@@ -25,7 +26,7 @@ import random as __rand
 
 BIRD_NAME = None
 __MSG_DELIMITER = "->"
-__RADIO_GROUP_HELLO = 1
+__RADIO_GROUP_GREETINGS = 1
 __RADIO_GROUP_BIRDS = 17
 
 # Defined radio messages to react to
@@ -51,14 +52,14 @@ class react():
 
 
 def __hi_everyone_i_am_here():
-    """Say hello to the world until you hear hello back to you.
+    """Send greetings to the world until you hear greetings back to you.
     The micro:bit that transmits radio events keeps a list of active birds,
     so this is a way to register your bird is active.
     """
-    print("👋 Hello, my name is {}. Can anybody hear me...?".format(BIRD_NAME))
-    __radio.config(group=__RADIO_GROUP_HELLO, power=7)
+    print("👋 Greetings, my name is {}. Can anybody hear me...?".format(BIRD_NAME))
+    __radio.config(group=__RADIO_GROUP_GREETINGS, power=7)
     __radio.on()
-    msg_out = "hello{}{}".format(__MSG_DELIMITER, BIRD_NAME)
+    msg_out = "greetings{}{}".format(__MSG_DELIMITER, BIRD_NAME)
     timeout = __mb.running_time() + (30 * 1000)
     while __mb.running_time() < timeout:
         try:
@@ -70,15 +71,15 @@ def __hi_everyone_i_am_here():
                     break
                 else:
                     radio_received = __radio.receive()
-            if radio_received != msg_out:
+            if radio_received == msg_out:
                 # So glad somebody said hello back, I can go on with my business now
-                print("🎉 Somebody said hello back, this is such a friendly neighbourhood!")
+                print("🎉 Somebody sent greetings back, this is such a friendly neighbourhood!")
                 break
         except:
             pass
     else:
         # I've been waiting too long to be acknowledged
-        print("Warning! Bird could not hear any hello back.")
+        print("Warning! Bird could not hear any greetings back.")
     # Move to the radio group with all the birds
     __radio.config(group=__RADIO_GROUP_BIRDS, power=1)
 
@@ -136,11 +137,14 @@ def __process_world(message):
     # Okay, the message is for us, let's figure out what to do with it!
     print("👂 I've heard something: {}".format(message))
     # First we run any code specific for the message
-    if msg_split[0] == "hello":
+    msg_type = msg_split[0]
+    if msg_type == "greetings":
         __hi_everyone_i_am_here()
+        # In this special case we want to run the "hello" callback as well
+        msg_type = "hello"
     # Then we run the user callback
-    if msg_split[0] in react.callbacks:
-        react.callbacks[msg_split[0]]()
+    if msg_type in react.callbacks:
+        react.callbacks[msg_type]()
     return
 
 

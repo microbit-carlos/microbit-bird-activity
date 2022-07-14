@@ -7,10 +7,12 @@ msg_options = ["hello", "cat", "hawk", "food", "dawn", "dusk"]
 active_birds = dict({
     "fake_bird": running_time()
 })
-MSG_DELIMITER = "->"
-RADIO_GROUP_HELLO = 1
-RADIO_GROUP_BIRDS = 17
 
+MSG_DELIMITER = "->"
+RADIO_GROUP_GREETINGS = 1
+RADIO_GROUP_BIRDS = 17
+GREETING_MSG = "greetings"
+TIME_BETWEEN_EVENTS = 30_000
 
 def check_birds():
     """
@@ -23,13 +25,12 @@ def check_birds():
         # First confirm all active birds still present
         for bird_id in active_birds_copy.keys():
             print("👀 Check bird presence: {}".format(bird_id))
-            radio_send_group("hello", bird_id)
+            radio_send_group(GREETING_MSG, bird_id)
             yield
 
 
 bird_check = check_birds()
-#@run_every(s=30)
-@run_every(s=10)
+@run_every(s=20)
 def check_next_bird():
     # First say hello to the next bird in the list
     next(bird_check)
@@ -66,7 +67,7 @@ def radio_send_group(msg, send_to="all"):
     msg = "{}{}{}".format(msg, MSG_DELIMITER, send_to)
     print("radio send: {}".format(msg))
     radio.send(msg)
-    radio.config(group=RADIO_GROUP_HELLO, power=7)
+    radio.config(group=RADIO_GROUP_GREETINGS, power=7)
 
 
 def reset_all():
@@ -74,7 +75,7 @@ def reset_all():
     print("📢 Send reset signal to all birds.")
     global active_birds
     active_birds.clear()
-    radio_send_group("reset", send_to="all")
+    radio_send_group(GREETING_MSG, send_to="all")
 
 
 def process_radio_msg(radio_msg):
@@ -89,9 +90,10 @@ def process_radio_msg(radio_msg):
     if len(msg_split) != 2:
         print("Could not separate msg into two.")
         return
-    if msg_split[0] == "hello":
+    if msg_split[0] == GREETING_MSG:
         # Add new entry or update timestamp with last time we heard this bird
         active_birds[msg_split[1]] = running_time()
+        print("List of birds: {}".format(active_birds))
         # Send message back to let the bird know it's registered
         radio.send(radio_msg)
     else:
@@ -99,11 +101,12 @@ def process_radio_msg(radio_msg):
 
 
 # Turn on the radio and set group 1 to listen for new birds
-radio.on()
-radio.config(group=RADIO_GROUP_HELLO, power=7, queue=10)
-
 print("🚀 Programme starting...")
+radio.on()
+radio.config(group=RADIO_GROUP_GREETINGS, power=7, queue=10)
 reset_all()
+
+next_event = running_time() + TIME_BETWEEN_EVENTS
 i = 0
 while True:
     # Listen for new birds
@@ -143,4 +146,12 @@ while True:
         display.scroll(msg_options[i])
     # Update the selection on the display and wait before the next iteration
     display.show(i)
+
+    # Run a random event
+    if running_time() > next_event:
+        rand_event = random.choice(msg_options)
+        print("🎲 Send random event: {}".format(rand_event))
+        radio_send_group(rand_event, "all")
+        next_event = running_time() + TIME_BETWEEN_EVENTS
+
     sleep(100)
