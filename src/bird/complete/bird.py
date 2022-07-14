@@ -160,16 +160,29 @@ def current_state():
     return "chill"
 
 
+last_hawk = __mb.running_time()
+
 def warn_about_hawk():
+    # Only warn about hawks once per minute
+    if __mb.running_time() < (last_hawk + 60_0000):
+        return
+    last_hawk = __mb.running_time()
     # Impose a delay before warning others
     __mb.sleep(__rand.randint(500,1500))
     __radio.send("hawk->all")
 
 
+last_cat = __mb.running_time()
+
 def warn_about_cat():
+    # Only warn about cats once per minute
+    if __mb.running_time() < (last_cat + 60_0000):
+        return
+    last_cat = __mb.running_time()
     # Impose a delay before warning others
     __mb.sleep(__rand.randint(500,1500))
     __radio.send("cat->all")
+
 
 def say_hello_to(friendly_name):
     __radio.send("hello->{}".format(friendly_name))
