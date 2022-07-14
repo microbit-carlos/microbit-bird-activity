@@ -5,14 +5,14 @@ layout: default
 
 # Bird Pipe Cleaners
 
-TODO: It'd be nice to make this intro more whimsical. And we could give
-      each bird a name?
+Take this quiz to find out what kind of bird you are!
 
-What kind of bird do you fancy making??
+Well, no really, but you have a few options available.
+What kind of bird do you fancy making? 🦜 🦉 🐥  🦅
 
-These YouTube tutorials last only a few minutes and show clearly how to make
-these bird. A couple of the options also have step by step instructions with
-screenshots, but the video is likely easier to understand.
+These YouTube tutorials are relatively short and show how to make
+these cool birds. A couple of the options also have step by step
+instructions with screenshots, but the video is likely easier to understand.
 
 ## Bird 1
 
@@ -24,7 +24,8 @@ screenshots, but the video is likely easier to understand.
 
 ### Individual steps screenshots
 
-The best way to make this bird is by following the video. These steps help
+The best way to make this bird is by following the video. These steps might
+be helpful for a second round of bird making.
 
 <br>
 To make the body bend two pipe cleaners by half:
@@ -130,6 +131,51 @@ screenshots are provided.
 [![Youtube Video 3 thumbnail](img/youtube3.jpg)](https://www.youtube.com/watch?v=FDVOGPHk06A)
 
 [YouTube Link for Bird 3](https://www.youtube.com/watch?v=FDVOGPHk06A)
+
+### Individual steps screenshots
+
+The best way to make this bird is by following the video. These steps might
+be helpful for a second round of bird making.
+
+<br>
+Start with a single pipe cleaner and start rolling it in this shape:
+
+<img src="img/youtube3/1.jpg" width="49%">
+<img src="img/youtube3/2.jpg" width="49%">
+
+<br>
+We don't have scissors to cut the peak, but there are a few pre-cut bits in
+the box:
+<img src="img/youtube3/3.jpg" width="49%">
+
+<br>
+
+Get a new pipe cleaner, pass it through the center of the body,
+and bend it in half:
+
+<img src="img/youtube3/4.jpg" width="49%">
+<img src="img/youtube3/5.jpg" width="49%">
+<img src="img/youtube3/6.jpg" width="49%">
+
+<br>
+
+For each half, bend it into three triangles to form each foot:
+
+<img src="img/youtube3/8.jpg" width="49%">
+<img src="img/youtube3/10-5.png" width="49%">
+
+<br>
+
+Glue the peak and googly eye:
+
+<img src="img/youtube3/11.jpg" width="49%">
+<img src="img/youtube3/12.jpg" width="49%">
+
+<br>
+
+And there we go!
+
+<img src="img/youtube3/13.jpg" width="49%">
 
 
 ## Eagle
