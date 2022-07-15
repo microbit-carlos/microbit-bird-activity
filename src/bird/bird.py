@@ -164,6 +164,7 @@ def current_mood():
 last_hawk = __mb.running_time()
 
 def warn_about_hawk():
+    global last_hawk
     # Only warn about hawks once per minute
     if __mb.running_time() < (last_hawk + 60_0000):
         return
@@ -176,6 +177,7 @@ def warn_about_hawk():
 last_cat = __mb.running_time()
 
 def warn_about_cat():
+    global last_cat
     # Only warn about cats once per minute
     if __mb.running_time() < (last_cat + 60_0000):
         return
