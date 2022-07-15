@@ -1,0 +1,29 @@
+/* Header with the Foundation Python Editor colours */
+header {
+    background: transparent linear-gradient(to right, #6c4bc1 0%, #7bcdc2 100%) 0% 0% no-repeat padding-box;
+}
+
+/* Box around exercise steps */
+.exercise {
+    background-color: #7acdc21a;
+    border-left: 3px dashed #7acdc2;
+    padding: 8px 16px 16px 16px;
+    margin: 6px;
+}
+.exercise::first-line {
+    color: #174c45;
+    font-weight: bold;
+    line-height: 2.5rem;
+}
+
+/* A more prominent box */
+.important {
+    background-color: #f3ff001f;
+    border: 3px dashed #ffe800;
+    padding: 8px 16px 16px 16px;
+    margin: 6px;
+}
+.important::first-line {
+    font-weight: bold;
+    line-height: 2.5rem;
+}
