@@ -35,8 +35,8 @@ and brand new
 
 <p class="important">
 ❗️ Important: <br>
-Using the version of the Python Editor linked in this section an the provided
-hex file are necessary to start the activity.
+To be able to start the activity correctly we need to use the version of the
+Python Editor linked here and the provided hex file in this section.
 </p>
 
 Okay, so the first step is to open this link to the Python Editor.
@@ -150,8 +150,9 @@ Using the REPL is also really handy for calling your `cat()` function.
 Instructions on how to access the REPL are in the
 [Trying Sound Effects in the REPL section](#trying-sound-effects-in-the-repl).
 
-There are move events to explore, have a look at the
-[More events, more sounds](#more-events-more-sounds) section.
+There are move events to explore, if you'd like to go through these now you
+can check them out in the [More events, more sounds](#more-events-more-sounds) 
+section.
 
 
 ## Bird Mood

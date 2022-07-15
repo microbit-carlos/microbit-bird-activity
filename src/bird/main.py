@@ -14,12 +14,6 @@ def hello():
     display.show(Image.HEART)
     sleep(400)
 
-@bird.react("cat")
-def cat():
-    """ What is that?? I think I just saw a cat!
-    Remember to warn the rest of the birds!"""
-    pass
-
 
 # Other things can also happen to our birds, check its mood and act accordingly 
 while True:
